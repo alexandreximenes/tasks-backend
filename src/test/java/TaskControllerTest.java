@@ -102,17 +102,4 @@ public class TaskControllerTest {
         Mockito.verify(taskRepo).save(task);
 
     }
-
-    @Test
-    public void deveSalvarTarefaComSucessoReturn() throws ValidationException {
-        Task task = new Task();
-        task.setTask("Tarefa 1");
-        task.setDueDate(LocalDate.now());
-
-        taskController.save(task);
-        Mockito.when(taskController.save(task)).thenReturn(new ResponseEntity<Task>(HttpStatus.CREATED));
-
-    }
-
-
 }

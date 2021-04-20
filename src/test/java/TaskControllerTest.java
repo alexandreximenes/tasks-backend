@@ -62,7 +62,7 @@ public class TaskControllerTest {
         }
     }
 
-    @Test(expected = ValidationException.class)
+    @Test
     public void naoDeveSalvarTarefaSemDataException() throws ValidationException {
         Task task = new Task();
         task.setTask("Tarefa 1");
